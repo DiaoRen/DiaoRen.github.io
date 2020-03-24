@@ -4,24 +4,24 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content=#58b77a>
-  <title>Tag-this is the test | Hexo</title>
+  <title>Tag-this is the test | 老乡♂加油站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="Diao Ren">
   <meta name="keywords" content="">
   <meta name="description" content="">
   <script id="hexo-configurations">
   var CONFIG = {
     root: '/',
-    theme: 'Simple',
+    theme: 'lx',
     version: '0.3.8',
     localsearch:{
-      "enable": false,
+      "enable": true,
       "trigger": "auto",
       "top_n_per_article": 1,
       "unescape": false,
       "preload": false
       },
-    path: '-'
+    path: 'search.xml'
   };
 </script>
 
@@ -57,20 +57,54 @@
 	     });
 	}); 
 	</script>
-  
+  <!--Google_Analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=..."></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '...');
+</script>
+<!--baidu_analytics-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?...";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
 <meta name="generator" content="Hexo 4.2.0"></head>
 <body>
 
 <div id="page">
+<a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i></a>
+<div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Search..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
 
-<div id="lx-aside" style="background-image: url(/images/cover2.png)">
+<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.8/source/images/cover.jpeg)">
   <div class="overlay">
   <div class="featured">
-    <div class="avatar"><a href="/"><img src="/images/avatar2.jpg"></a></div>
-    <span>John Doe</span>
-    <h1>Hexo</h1>
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>Diao Ren</span>
+    <h1>老乡♂加油站</h1>
     
     
   </div>
@@ -88,7 +122,7 @@
 
 <footer>
   <div>
-  Copyright &copy; 2019.<a href="/">Hexo</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  Copyright &copy; 2019.<a href="/">老乡♂加油站</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
   </div>
 </footer>
 
@@ -107,11 +141,11 @@
       <div class="col">
         <div class="row for-pic">
           <div class="profile-pic">
-            <a href="/"><img src="/images/avatar2.jpg" alt="John Doe"/></a>
+            <a href="/"><img src="/images/avatar.jpeg" alt="Diao Ren"/></a>
           </div>
         </div>
         <div class="row for-name">
-          <p>John Doe</p>
+          <p>Diao Ren</p>
           <span class="tagline">Hello, World!</span>
         </div>
       </div>
@@ -132,7 +166,7 @@
     <li class="has-sub"><span class="dropdown-heading">
       <i class="fa fa-link fa-fw"></i>Friends</span>
         <ul>
-          <li> <a href="https://diaoren.github.io/" target="_blank">Theme-Lx</a></li>
+          <li> <a href="https://lx.js.org" target="_blank">Theme-Lx</a></li>
         </ul>
     </li>
   </ul>
@@ -168,7 +202,7 @@
 	});
 }());
 </script>
-
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.8/source/js/local.search.js"></script>
 
 
 </body>
