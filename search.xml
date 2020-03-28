@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo搭建及服务器搭建</title>
+    <url>/2020/03/29/hexo/</url>
+    <content><![CDATA[<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="前置环境"><a href="#前置环境" class="headerlink" title="前置环境"></a>前置环境</h2><p>第一步安装Node.js</p>
+<p>第二步安装git</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<p>安装完毕后可以创建自己的博客（也就是一个放文件的目录）</p>
+<p>cd到自己博客目录中输入</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>在这个过程中可能会出现失败的情况以下有几种解决方法</p>
+<p>1、修改host为8.8.8.8（一般没用）</p>
+<p>2、科学上网（最有效）</p>
+<p>3、挂淘宝镜像</p>
+<p>4.反复init；</p>
+<p>hexo clean 清理博客</p>
+<p>hexo g 更新博客至本地</p>
+<p>hexo d 更新博客置于指定地点</p>
+<h2 id="全球最大铜芯焦油网站"><a href="#全球最大铜芯焦油网站" class="headerlink" title="全球最大铜芯焦油网站"></a>全球最大铜芯焦油网站</h2><p>注册github,建立自己的库,并在设置中获取该库的网站</p>
+<p>在博客目录下的config中写入github库中的url</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: <span class="comment">//复制的url</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>之后还需要获取ssh密钥保证你能成功得把本地的博客传入GitHub</p>
+<p><a href="https://blog.csdn.net/nineya_com/article/details/103301870" target="_blank" rel="noopener">解决方法</a></p>
+<h2 id="使用MD写博文遇到图片怎么办"><a href="#使用MD写博文遇到图片怎么办" class="headerlink" title="使用MD写博文遇到图片怎么办"></a>使用MD写博文遇到图片怎么办</h2><p>Markdown 语法支持本地图片的插入和网络图片的插入，但是在使用</p>
+<p>本地图片时常常会先传输失败的问题,原因在于Hexo在打包过程中,改变了文章的目录破坏了相对地址,也没有对图片进行打包,造成图片的丢失.</p>
+<p><a href="https://blog.csdn.net/Fitz1318/article/details/86548129?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">办法一</a></p>
+<p>方法二:使用图床,我这里使用的是阿里云oss放在下面讲</p>
+<h1 id="服务的购买与搭建"><a href="#服务的购买与搭建" class="headerlink" title="服务的购买与搭建"></a>服务的购买与搭建</h1><p>服务器可以选择各大运营商的学生服务器,优惠力度很大.</p>
+<h2 id="初始服务器"><a href="#初始服务器" class="headerlink" title="初始服务器"></a>初始服务器</h2><p>买完服务器第一件事就是设置用户密码然后再更换系统,更换密码请观看阿里云的帮助手册这里以阿里云只演示更换镜像</p>
+<p><img src="/2020/03/29/hexo/1.png" alt></p>
+<p>点开详情页面选择重置系统</p>
+<p><img src="/2020/03/29/hexo/2.png" alt></p>
+<p>应用镜像不用更改,系统镜像可以选择乌邦图,CentOS(如果不是土豪请不要选择Windows)</p>
+<h2 id="域名及端口"><a href="#域名及端口" class="headerlink" title="域名及端口"></a>域名及端口</h2><p>域名需要在网上自行购买</p>
+<p>登陆后选择网站并添加站点并在域名管理中解析</p>
+<p><img src="/2020/03/29/hexo/6.png" alt></p>
+<p>具体的操作流程交给阿里的帮助文档和客服人员</p>
+<p><img src="/2020/03/29/hexo/8.png" alt></p>
+<p>在服务器的详情中找到安全组/防火墙 添加规则</p>
+<p><img src="/2020/03/29/hexo/9.png" alt></p>
+<p>添加协议和端口号</p>
+<h2 id="搭建站点"><a href="#搭建站点" class="headerlink" title="搭建站点"></a>搭建站点</h2><p>重置完成后在详情页面进行远程连接<a href="https://www.bt.cn/bbs/thread-19376-1-1.html" target="_blank" rel="noopener">安装宝塔面板</a>(非必须但很好用)</p>
+<p>记住宝塔安装完成后给你的网页链接,用户名和密码.</p>
+<p>进入网页链接输入相应的用户名和密码</p>
+<p><img src="/2020/03/29/hexo/3.png" alt></p>
+<p><img src="/2020/03/29/hexo/4.png" alt></p>
+<p><img src="/2020/03/29/hexo/5.png" alt></p>
+<p>域名如果没有可以填写你的公网ip:端口号</p>
+<p>根目录可以自定义</p>
+<p><img src="/2020/03/29/hexo/10.png" alt></p>
+<p>选择文件并打开更目录并上传本地博客文件夹下的public中的所有内容到根目录下,就可以使用你填写的域名/IP来访问博客了.</p>
+<h2 id="oss云存储"><a href="#oss云存储" class="headerlink" title="oss云存储"></a>oss云存储</h2><p>oss为阿里云存储可以使用它作为网络图床<a href="https://zh.mweb.im/how_to_use_aliyun_cos.html" target="_blank" rel="noopener">制作</a></p>
+<h1 id="附赠-魔改spfk主题"><a href="#附赠-魔改spfk主题" class="headerlink" title="附赠:魔改spfk主题"></a>附赠:魔改spfk主题</h1><p>下载</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="comment">//github.com/luuman/hexo-theme-spfk.git themes/spfk</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="https://bestwing.me/Hexo-Theme.html" target="_blank" rel="noopener">老版本教程</a></p>
+<p>由于友言已经关闭了评论功能所以我们换用valine<a href="https://github.com/luuman/hexo-theme-spfk/pull/77/commits/0e66a9c59bfc74f16e9141fe857fa5306d8e503c?file-filters%5B%5D=.ejs#diff-aeb42283af8ef8e9da40ededd3ae2ab2R77-R87" target="_blank" rel="noopener">具体操作</a></p>
+<p>如果还想再博客中添加一些<a href="https://www.cnblogs.com/TRHX/p/11699939.html#font_colorFF000___font_12" target="_blank" rel="noopener">炫酷的功能</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Blog4Test</title>
     <url>/2020/03/24/Blog4Test/</url>
     <content><![CDATA[<h1 id="图片测试"><a href="#图片测试" class="headerlink" title="图片测试"></a>图片测试</h1><p>本地文件</p>
