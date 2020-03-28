@@ -3,7 +3,10 @@
   <entry>
     <title>Blog4Test</title>
     <url>/2020/03/24/Blog4Test/</url>
-    <content><![CDATA[<h1 id="图片测试"><a href="#图片测试" class="headerlink" title="图片测试"></a>图片测试</h1><p><img src="/2020/03/24/Blog4Test/Lua.jpg" alt></p>
+    <content><![CDATA[<h1 id="图片测试"><a href="#图片测试" class="headerlink" title="图片测试"></a>图片测试</h1><p>本地文件</p>
+<p><img src="/2020/03/24/Blog4Test/Lua.jpg" alt></p>
+<p>oss文件</p>
+<p><img src="https://image4diaoren.oss-cn-beijing.aliyuncs.com/Pic/Lua2.png" alt></p>
 ]]></content>
       <tags>
         <tag>this is the test</tag>

@@ -410,6 +410,7 @@ a.category-link {
 }
 .lx-post {
   padding: 10px;
+  background: #000;
 }
 .lx-post .lx-entry {
   float: left;
@@ -428,10 +429,12 @@ a.category-link {
   width: 100%;
   float: left;
   margin-top: 0px;
+  background: #000;
 }
 .single .lx-post .lx-entry > div {
   margin-right: 0;
   width: 100%;
+  background: #000;
 }
 .post-button {
   text-align: right;
