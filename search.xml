@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Linux文件处理命令</title>
+    <url>/2020/03/31/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="命令格式与目录处理命令"><a href="#命令格式与目录处理命令" class="headerlink" title="命令格式与目录处理命令"></a>命令格式与目录处理命令</h1><hr>
+<p>命令格式： 命令 [-选项] [参数]</p>
+<h2 id="ls-命令"><a href="#ls-命令" class="headerlink" title="ls 命令"></a>ls 命令</h2><p>原意：list</p>
+<p>命令所在路径： /bin/ls</p>
+<p>执行权限： 所有用户</p>
+<p>功能： 显示目录文件</p>
+<p>语法 ： ls 选项[-ald] [文件或目录]</p>
+<p>​                        -a (all)  显示所有文件，包括隐藏文件</p>
+<p>​                        -l (long)详细信息显示</p>
+<p>​                        -d 查看目录属性</p>
+<p>​                        -h (human) 人性化显示</p>
+<p>​                        -i 查看id号</p>
+<h2 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h2><p> ’ -  ‘ 表示权限</p>
+<p> ‘ d ’ （document）代表目录</p>
+<p> ‘ l ’  （link）代表软链接</p>
+<h2 id="ugo权限解释"><a href="#ugo权限解释" class="headerlink" title="ugo权限解释"></a>ugo权限解释</h2><p>例如 rw- r– r– </p>
+<p>​        u    g   o</p>
+<p>u所有者 g所属组 o其他</p>
+<p>r读 w写 x可执行</p>
+<h2 id="文件与用户关系"><a href="#文件与用户关系" class="headerlink" title="文件与用户关系"></a>文件与用户关系</h2><p>所有者：一般为创建该文件的人（所有者只能有一个）</p>
+<p>所属组：可以使用该文件的一群人（只能有一组）</p>
+<p>其他：剩余的用户</p>
+<h1 id="目录处理指令"><a href="#目录处理指令" class="headerlink" title="目录处理指令"></a>目录处理指令</h1><h2 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a>mkdir命令</h2><p>原意：make directories</p>
+<p>命令所在路径： /bin/mkdir</p>
+<p>执行权限： 所有用户</p>
+<p>功能： 创建新目录</p>
+<p>​            -p递归创建（可以在本身不存在的目录下创建新的子目录【根目录和子目录一同被创建】）</p>
+<p>语法 ：mkdir -p [目录名]</p>
+<p>例如：mkdir  /tmp/text</p>
+<p>​            mkdir -p /tmp/text2/text3</p>
+<h2 id="rmdir命令"><a href="#rmdir命令" class="headerlink" title="rmdir命令"></a>rmdir命令</h2><p>原意：remove emptydirectories</p>
+<p>命令所在路径：/bin/rmdir</p>
+<p>执行权限：所有用户</p>
+<p>语法：rmdir [目录名]</p>
+<p>功能：删除空目录</p>
+<h2 id="cd指令"><a href="#cd指令" class="headerlink" title="cd指令"></a>cd指令</h2><p>原意：change directory</p>
+<p>命令所在路径： shell 内置命令</p>
+<p>执行权限：所有用户</p>
+<p>语法：cd [目录]</p>
+<p>功能：切换目录</p>
+<h2 id="pwd指令"><a href="#pwd指令" class="headerlink" title="pwd指令"></a>pwd指令</h2><p>原意：print working directory</p>
+<p>命令所在路径：/bin/pwd</p>
+<p>执行权限：所有用户</p>
+<p>语法：pwd</p>
+<p>功能：显示当前目录</p>
+<h2 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h2><p>原意：copy</p>
+<p>命令所在路径：/bin/cp</p>
+<p>执行权限：所有用户</p>
+<p>语法：cp -rp [原文件或目录] [目标目录]</p>
+<p>​            -r 复制目录</p>
+<p>​            -p 保留文件属性（时间属性不会发生改变）</p>
+<p>功能：复制文件或目录，可以同时复制多个文件或目录</p>
+<p>复制的同时可以改名</p>
+<h2 id="mv命令"><a href="#mv命令" class="headerlink" title="mv命令"></a>mv命令</h2><p>原意：move</p>
+<p>命令所在路径：/bin/mv</p>
+<p>执行权限：所有用户</p>
+<p>语法：mv [原文件或目录]</p>
+<p>功能：剪切文件，改名</p>
+<h2 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h2><p>原意：remove</p>
+<p>命令所在路径：/bin/rm</p>
+<p>执行权限：所有用户</p>
+<p>语法：rm -rf [文件或目录]</p>
+<p>​                -r 删除目录</p>
+<p>​                -f 强制执行</p>
+<p>功能：删除文件，目录</p>
+<h1 id="文件处理命令"><a href="#文件处理命令" class="headerlink" title="文件处理命令"></a>文件处理命令</h1><h2 id="touch命令"><a href="#touch命令" class="headerlink" title="touch命令"></a>touch命令</h2><p>命令所在路径：/bin/touch</p>
+<p>执行权限：所有用户</p>
+<p>语法：touch [文件名]</p>
+<p>功能：创建空文件</p>
+<h2 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h2><p>命令所在路径：/bin/cat</p>
+<p>执行权限：所有用户</p>
+<p>语法：cat [文件名]</p>
+<p>功能：显示文件内容</p>
+<p>​            -n 显示行号</p>
+<p>不适合浏览大文件</p>
+<h2 id="tac命令"><a href="#tac命令" class="headerlink" title="tac命令"></a>tac命令</h2><p>命令所在路径：/usr/bin/tac</p>
+<p>执行权限：所有用户</p>
+<p>语法：tac [文件名]</p>
+<p>功能：显示文件内的内容（反向列示）</p>
+<h2 id="more命令"><a href="#more命令" class="headerlink" title="more命令"></a>more命令</h2><p>命令所在路径：/bin/more</p>
+<p>执行权限：所有用户</p>
+<p>语法：more [文件名]</p>
+<p>​            (空格)或f  翻页</p>
+<p>​            (Enter)  换行</p>
+<p>​            q或Q  退出</p>
+<p>功能：分页显示文件内容 （适合大容量读，不可上翻）</p>
+<h2 id="less命令"><a href="#less命令" class="headerlink" title="less命令"></a>less命令</h2><p>命令所在路径：/usr/bin/less </p>
+<p>执行权限：所有用户</p>
+<p>语法：less [文件名]</p>
+<p>功能：分页显示文件内容（可以向上翻页）</p>
+<p>​            [pageup] 向上翻一页</p>
+<p>​            上箭头  向上翻一行</p>
+<p>​            /[关键词]  自动搜索 按n继续往下找</p>
+<h2 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h2><p>命令所在路径：/usr/bin/head</p>
+<p>执行权限：所有用户</p>
+<p>语法：head [文件名]</p>
+<p>功能：显示文件前面几行</p>
+<p>​            -n 指定行数</p>
+<h2 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h2><p>命令所在路径：/usr/bin/tail</p>
+<p>执行权限：所有用户</p>
+<p>语法：tail[文件名]</p>
+<p>功能：显示文件后面几行</p>
+<p>​            -n 指定行数</p>
+<p>​            -f 动态显示文件末尾内容</p>
+<h1 id="链接命令"><a href="#链接命令" class="headerlink" title="链接命令"></a>链接命令</h1><h2 id="ln命令"><a href="#ln命令" class="headerlink" title="ln命令"></a>ln命令</h2><p>原意：link</p>
+<p>命令所在路径：/bin/ln  </p>
+<p>执行权限：所有用户</p>
+<p>语法：ln -s [原文件] [目标文件]</p>
+<p>​                -s 创建软链接</p>
+<p>功能描述：生成链接文件</p>
+<p>例子： ln -s /etc/issue /tmp/issue.soft  创建软链接</p>
+<p>​            ln  /etc/issue /tmp/issue.hard    创建硬链接</p>
+<h3 id="软链接与硬连接的特点与不同"><a href="#软链接与硬连接的特点与不同" class="headerlink" title="软链接与硬连接的特点与不同"></a>软链接与硬连接的特点与不同</h3><p>软链接特征：类似于Windows中的快捷方式</p>
+<p>硬连接特征：拷贝cp -p + 同步更新{硬连接不能跨分区，不能对目录使用}</p>
+<p>​            （源文件丢失硬连接文件也能访问，于源文件id号相同）</p>
+]]></content>
+      <tags>
+        <tag>一键三连</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo搭建及服务器搭建</title>
     <url>/2020/03/29/hexo/</url>
     <content><![CDATA[<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="前置环境"><a href="#前置环境" class="headerlink" title="前置环境"></a>前置环境</h2><p>第一步安装Node.js</p>
